@@ -79,4 +79,10 @@ public class Staff {
 		super();
 	}
 
+	@Override
+	public String toString() {
+		return "Staff [id=" + id + ", idPrincipal=" + idPrincipal + ", name=" + name + ", sex=" + sex + ", idNumber="
+				+ idNumber + ", birthday=" + birthday + ", phone=" + phone + "]";
+	}
+
 }

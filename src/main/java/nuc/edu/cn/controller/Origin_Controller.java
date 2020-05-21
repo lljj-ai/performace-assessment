@@ -12,5 +12,5 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class Origin_Controller {
-
+	
 }
