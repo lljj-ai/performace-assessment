@@ -5,8 +5,13 @@
 <mapper namespace="nuc.edu.cn.mapper.ICenterManagerMapper">
 	<resultMap id="displayManager" type="nuc.edu.cn.util.CenterManager">
 	    <result column="id" property="id"/>
+	    <result column="id_depart" property="idDepart"/>
+	    <result column="name" property="name"/>
+	    <result column="phone" property="phone"/>
+	    <result column="score" property="score"/>
+	    <result column="contain" property="contain"/>
 	</resultMap>
 	<select id="displayManagers" resultMap="displayManager">
-		
+		SELECT id,id_depart,name,phone,score,contain from centermanager ORDER BY score;
 	</select>
 </mapper>
