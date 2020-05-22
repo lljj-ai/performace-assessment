@@ -1,23 +1,24 @@
 /**
  * @company 中北软院
  */
-package nuc.edu.cn.service;
+package nuc.edu.cn.mapper;
 
 import java.security.Principal;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import org.apache.ibatis.annotations.Mapper;
 
 import nuc.edu.cn.util.Staff;
 
 /**
-  * 负责人
+ *
  * @author 洛少雄
  * @date 2020年5月22日
  * @version 1.0
  */
-@Service
-public interface  IPrincipal_Service {
+@Mapper
+public interface IPrincipalMapper {
+	
 	/**
 	  * 查询所有负责人信息
 	 * @param principal
@@ -29,6 +30,5 @@ public interface  IPrincipal_Service {
 	 * @param principal
 	 * @return
 	 */
-    public List<Staff> displayStaffs(Principal principal);
-    
+	public List<Staff> displayStaffs(Principal principal);
 }
