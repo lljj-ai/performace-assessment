@@ -18,6 +18,25 @@ public class Staff {
 	private String idNumber;
 	private Date birthday;
 	private String phone;
+	private String contain;
+	
+	public String getContain() {
+		return contain;
+	}
+
+	public void setContain(String contain) {
+		this.contain = contain;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	private int score;
 
 	public int getId() {
 		return id;
@@ -77,12 +96,6 @@ public class Staff {
 
 	public Staff() {
 		super();
-	}
-
-	@Override
-	public String toString() {
-		return "Staff [id=" + id + ", idPrincipal=" + idPrincipal + ", name=" + name + ", sex=" + sex + ", idNumber="
-				+ idNumber + ", birthday=" + birthday + ", phone=" + phone + "]";
 	}
 
 }

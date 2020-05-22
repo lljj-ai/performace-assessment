@@ -4,6 +4,7 @@
 package nuc.edu.cn.util;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -18,6 +19,33 @@ public class CenterManager {
 	private String idNumber;
 	private Date birthday;
 	private String phone;
+	private String contain;
+	private int score;
+	private List<Principal> principal;
+
+	public List<Principal> getPrincipal() {
+		return principal;
+	}
+
+	public void setPrincipal(List<Principal> principal) {
+		this.principal = principal;
+	}
+
+	public String getContain() {
+		return contain;
+	}
+
+	public void setContain(String contain) {
+		this.contain = contain;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
 
 	public int getId() {
 		return id;

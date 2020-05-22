@@ -4,6 +4,7 @@
 package nuc.edu.cn.util;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -17,6 +18,33 @@ public class DepartManager {
 	private String idNumber;
 	private Date birthday;
 	private String phone;
+	private String contain;
+	private int score;
+	private List<CenterManager> centerManager;
+
+	public List<CenterManager> getCenterManager() {
+		return centerManager;
+	}
+
+	public void setCenterManager(List<CenterManager> centerManager) {
+		this.centerManager = centerManager;
+	}
+
+	public String getContain() {
+		return contain;
+	}
+
+	public void setContain(String contain) {
+		this.contain = contain;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
 
 	public int getId() {
 		return id;
