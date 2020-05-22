@@ -1,7 +1,7 @@
 /*
   * 公司版权 2020
  */
-package nuc.edu.cn.service;
+package nuc.edu.cn.mapper;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import nuc.edu.cn.util.Staff;
  * @author 刘杰
  * @version 1.0
  */
-public interface ICenterManager_Service {
+public interface ICenterManagerMapper {
 	/**
 	 * 同级中心经理查询
 	 * 
