@@ -19,6 +19,7 @@ public class Staff {
 	private Date birthday;
 	private String phone;
 	private String contain;
+	private int score;
 	
 	public String getContain() {
 		return contain;
@@ -36,7 +37,7 @@ public class Staff {
 		this.score = score;
 	}
 
-	private int score;
+
 
 	public int getId() {
 		return id;
