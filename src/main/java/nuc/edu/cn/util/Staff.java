@@ -20,7 +20,6 @@ public class Staff {
 	private String phone;
 	private String contain;
 	private int score;
-	
 	public String getContain() {
 		return contain;
 	}
@@ -36,7 +35,6 @@ public class Staff {
 	public void setScore(int score) {
 		this.score = score;
 	}
-
 
 
 	public int getId() {
