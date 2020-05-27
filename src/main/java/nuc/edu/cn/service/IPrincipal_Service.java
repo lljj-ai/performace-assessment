@@ -19,16 +19,37 @@ import nuc.edu.cn.util.Staff;
 @Service
 public interface  IPrincipal_Service {
 	/**
-	  * 查询所有负责人信息
+	 * 查询所有负责人信息
 	 * @param principal
 	 * @return
 	 */
-	public List<Principal> displayPrincipals(Principal principal);
+	public List<Principal> selectAllPrincipals();
+	
 	/**
-	  *  查询所属员工信息
+	 * 查询所属员工信息
 	 * @param principal
 	 * @return
 	 */
-    public List<Staff> displayStaffs(Principal principal);
+    public List<Staff> selectAllStaff(Principal principal);
     
+    /**
+     * 插入员工
+     * @param id
+     * @return
+     */
+	int insertSatff(Staff satff);
+	
+	/**
+	 * 更新员工信息
+	 * @param satff
+	 * @return
+	 */
+	int updateStaff(Staff satff);
+	
+	/**
+	 * 删除员工
+	 * @param id
+	 * @return
+	 */
+    int deleteStaff(int id);
 }

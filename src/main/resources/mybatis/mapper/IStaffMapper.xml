@@ -3,8 +3,20 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="nuc.edu.cn.mapper.IStaffMapper">
-	<resultMap id="displayStaffs" type="nuc.edu.cn.util.Staff">
-	    <result column="id" property="id"/>
+
+	<resultMap type="nuc.edu.cn.util.Staff" id="IStaffMapper" >
+	    <id column="id" property="id"/>
+		<result column="id_principal" property="idPrincipal"/>
+		<result column="name" property="name"/>
+		<result column="sex" property="sex"/>
+		<result column="id_number" property="idNumber"/>
+		<result column="birthday" property="birthday"/>
+		<result column="phone" property="phone"/>
+		<result column="contain" property="contain"/>
+		<result column="score" property="score"/>
 	</resultMap>
 	
+	 <select id="selectAllStaffs" resultMap="IStaffMapper">
+        select * from staff
+    </select>
 </mapper>

@@ -3,9 +3,6 @@
  */
 package nuc.edu.cn.service;
 
-import java.security.Principal;
-import java.util.List;
-
 import nuc.edu.cn.util.Staff;
 
 /**
@@ -20,5 +17,5 @@ public interface IStaff_Service {
 	 * @param principal
 	 * @return
 	 */
-	public List<Staff> displayStaffs(Principal principal) ;
+	public Staff selectAllStaffs() ;
 }

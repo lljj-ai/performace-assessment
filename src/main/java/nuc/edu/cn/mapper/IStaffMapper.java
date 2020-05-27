@@ -23,5 +23,5 @@ public interface IStaffMapper {
 	 * @param principal
 	 * @return
 	 */
-	public List<Staff> displayStaffs(Principal principal);
+	public Staff selectAllStaffs();
 }

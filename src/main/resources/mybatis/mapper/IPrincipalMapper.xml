@@ -3,8 +3,49 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="nuc.edu.cn.mapper.IPrincipalMapper">
+
 	<resultMap id="displayPrincipals" type="nuc.edu.cn.util.Principal">
-	    <result column="id" property="id"/>
+	    <id column="id" property="id"/>
+		<result column="id_center" property="idCenter"/>
+		<result column="name" property="name"/>
+		<result column="sex" property="sex"/>
+		<result column="id_number" property="idNumber"/>
+		<result column="birthday" property="birthday"/>
+		<result column="phone" property="phone"/>
+		<result column="contain" property="contain"/>
+		<result column="score" property="score"/>
 	</resultMap>
 	
+	 <select id="selectAllPrincipals" resultMap="displayPrincipals">
+        select * from principal
+    </select>
+    
+    
+    
+    <resultMap id="IStaffMapper" type="nuc.edu.cn.util.Staff"  >
+	    <id column="id" property="id"/>
+		<result column="id_principal" property="idPrincipal"/>
+		<result column="name" property="name"/>
+		<result column="sex" property="sex"/>
+		<result column="id_number" property="idNumber"/>
+		<result column="birthday" property="birthday"/>
+		<result column="phone" property="phone"/>
+		<result column="contain" property="contain"/>
+		<result column="score" property="score"/>
+	</resultMap>
+	
+	 <select id="selectAllStaff" resultMap="IStaffMapper">
+        select * from staff where staff.id_principal=id
+    </select>
+    <insert id="insertStaff" useGeneratedKeys="true" keyProperty="id" parameterType="nuc.edu.cn.util.Staff">
+        insert into staff(id_principal,name,sex,id_number,birthday,phone,contain,score) 
+        values(#{idPrincipal},#{name},#{sex},#{idNumber},#{birthday},#{phone},#{contain},#{score})
+    </insert>
+    <update id="updateStaff" parameterType="nuc.edu.cn.util.Staff">
+        update staff set name=#{name},sex=#{sex},id_number=#{number},birthday=#{birthday},
+        phone=#{phone},contain=#{contain},score=#{score}
+    </update>
+    <delete id="deleteStaff" parameterType="nuc.edu.cn.util.Staff">
+        delete * from staff where id=#{id}
+    </delete>
 </mapper>

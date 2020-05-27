@@ -20,15 +20,35 @@ import nuc.edu.cn.util.Staff;
 public interface IPrincipalMapper {
 	
 	/**
-	  * 查询所有负责人信息
-	 * @param principal
+   	 * 查询所有负责人信息
 	 * @return
 	 */
-	public List<Principal> displayPrincipals(Principal principal);
+	List<Principal> selectAllPrincipals();
+	
 	/**
 	  *  查询所属员工信息
-	 * @param principal
 	 * @return
 	 */
-	public List<Staff> displayStaffs(Principal principal);
+	List<Staff> selectAllStaff(Principal principal);
+	
+	/**
+	 * 插入员工
+	 * @param staff
+	 * @return
+	 */
+	int insertStaff(Staff satff);
+	
+	/**
+	 * 更新员工
+	 * @param staff
+	 * @return
+	 */
+	int updateStaff(Staff staff);
+	
+	/**
+	 * 删除员工
+	 * @param id
+	 * @return
+	 */
+	int deleteStaff(int id);
 }

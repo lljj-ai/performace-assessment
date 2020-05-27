@@ -6,8 +6,11 @@ package nuc.edu.cn.serviceImp;
 import java.security.Principal;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import nuc.edu.cn.mapper.DepartmentMapper;
+import nuc.edu.cn.mapper.IStaffMapper;
 import nuc.edu.cn.service.IStaff_Service;
 import nuc.edu.cn.util.Staff;
 
@@ -20,9 +23,12 @@ import nuc.edu.cn.util.Staff;
 @Service
 public class Staff_ServiceImpl implements IStaff_Service {
 
+	@Autowired
+	IStaffMapper staffmapper;
+	
 	@Override
-	public List<Staff> displayStaffs(Principal principal) {
-		return null;
+	public Staff selectAllStaffs() {
+		return staffmapper.selectAllStaffs();
 	}
  
 }
