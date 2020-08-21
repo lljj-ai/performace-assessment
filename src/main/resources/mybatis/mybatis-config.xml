@@ -9,6 +9,6 @@
    </settings>
 
     <typeAliases>
-        <package name="nuc.edu.cn.pojo"/>
+        <package name="nuc.edu.cn.util"/>
     </typeAliases>
 </configuration>

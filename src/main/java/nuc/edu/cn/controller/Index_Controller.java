@@ -11,6 +11,6 @@ import org.springframework.stereotype.Controller;
  * @version 1.0
  */
 @Controller
-public class Origin_Controller {
+public class Index_Controller {
 	
 }

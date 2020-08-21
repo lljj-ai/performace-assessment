@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import nuc.edu.cn.mapper.DepartmentMapper;
+import nuc.edu.cn.mapper.*;
 import nuc.edu.cn.mapper.IStaffMapper;
 import nuc.edu.cn.service.IStaff_Service;
 import nuc.edu.cn.util.Staff;
